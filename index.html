@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ДЗЫНЬ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud">
+  <div id="likesBox"><span class="lbl">❤ лайки</span><span id="likes">0</span>
+    <span class="lbl dist">проехал</span><span id="dist">0 м</span><span id="best" class="small"></span>
+    <span class="lbl dist">пассажиры</span><span id="crew">0</span></div>
+  <div id="combo">
+    <div class="row"><span class="lbl">стрим</span><span id="pool">+0</span><span id="mult">×1</span></div>
+    <div class="barwrap"><div id="bar"></div></div>
+  </div>
+  <div id="speedBox">
+    <div><span id="speed">0</span><span class="unit">км/ч</span></div>
+    <div class="small">по паспорту — 25</div>
+    <div id="state"></div>
+  </div>
+  <div id="toast"></div>
+  <div id="hint">
+    газ всегда в пол · <b>A/D</b> (или ←/→) — влево / вправо<br>
+    <b>Пробел</b> прыжок · держи его в повороте — <b>дрифт → буст</b><br>
+    въезжай в попутчиков с <b style="color:#2fd16a">+1</b> — они лезут тебе на плечи<br>
+    <b>E</b> — ДЗЫНЬ · трюки в прыжке делаются сами<br>
+    приземлись вдоль скамейки или парапета — <b>грайнд</b><br>
+    <span class="dim"><b>R</b> новый заезд · <b>C</b> схема управления · <b>M</b> звук · <b>`</b> тюнинг</span>
+  </div>
+  <div id="mode"></div>
+</div>
+
+<div id="debug" class="hidden"></div>
+
+<div id="intro">
+  <div class="card">
+    <h1>ДЗЫНЬ</h1>
+    <p class="sub">Ты — самокатчик. Город — твой. Тротуар — особенно.</p>
+    <p>Одна прямая улица без конца. Газ всегда в пол — ты только рулишь влево и вправо. Смотри, как далеко уедешь.</p>
+    <p>Проезжай впритирку к пешеходам и звони им в звонок — стрим копит лайки.
+       Трюки, дрифт и грайнд держат стрим живым. Врежешься — стрим сгорит.</p>
+    <p>Подбирай попутчиков: каждый встаёт на плечи предыдущему и добавляет очков. Башня качается от каждого
+       поворота — резкая езда, фонари и ветки стряхивают верхних.</p>
+    <p class="go">Нажми любую клавишу</p>
+    <p class="dim">прототип движения · всё можно крутить в тюнинге (`)</p>
+  </div>
+</div>
+
+<script src="src/config.js"></script>
+<script src="src/util.js"></script>
+<script src="src/input.js"></script>
+<script src="src/world.js"></script>
+<script src="src/player.js"></script>
+<script src="src/peds.js"></script>
+<script src="src/score.js"></script>
+<script src="src/tower.js"></script>
+<script src="src/game.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/render.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
